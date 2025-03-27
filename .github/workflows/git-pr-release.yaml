@@ -5,7 +5,7 @@ on:
 jobs:
   release-pull-request:
     permissions:
-      pull-requests: write
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
