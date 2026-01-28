@@ -1,4 +1,4 @@
-d2m
-<% pull_requests.each do |pr| -%>
-<%= pr.to_checklist_item %>
+d2s
+<% pull_requests.sort_by { |pr| pr.merged_at || '' }.reverse.each do |pr| -%>
+- #<%= pr.number %> <%= pr.title %> @<%= pr.user.login %>
 <% end -%>
